@@ -38,11 +38,23 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewa-ps-Acz" customClass="FilterButton" customModule="PokeApp" customModuleProvider="target">
+                                <rect key="frame" x="31" y="95" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKy-fM-ZzO">
+                                <rect key="frame" x="179" y="139" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Jg0-P2-R9i" firstAttribute="trailing" secondItem="ewa-ps-Acz" secondAttribute="trailing" constant="298" id="8a3-BS-qRh"/>
                             <constraint firstItem="0vp-RS-vWn" firstAttribute="leading" secondItem="Jg0-P2-R9i" secondAttribute="leading" id="HET-UI-udB"/>
                             <constraint firstItem="0vp-RS-vWn" firstAttribute="trailing" secondItem="Jg0-P2-R9i" secondAttribute="trailing" id="Nbt-pC-Zcx"/>
+                            <constraint firstItem="ewa-ps-Acz" firstAttribute="leading" secondItem="Jg0-P2-R9i" secondAttribute="leading" constant="31" id="XrO-ow-MWX"/>
+                            <constraint firstItem="ewa-ps-Acz" firstAttribute="top" secondItem="0vp-RS-vWn" secondAttribute="bottom" constant="19" id="ecn-em-4k2"/>
                             <constraint firstItem="0vp-RS-vWn" firstAttribute="top" secondItem="Jg0-P2-R9i" secondAttribute="top" id="rR2-SV-eo3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jg0-P2-R9i"/>

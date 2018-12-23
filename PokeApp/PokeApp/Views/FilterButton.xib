@@ -13,7 +13,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilterButton" customModule="PokeApp" customModuleProvider="target">
             <connections>
-                <outlet property="filterLabel" destination="8mb-iy-cRJ" id="U0C-xU-UH0"/>
                 <outlet property="selectedView" destination="uIF-eL-ofH" id="Pf9-vj-dRs"/>
             </connections>
         </placeholder>
@@ -29,31 +28,19 @@
                         <constraint firstAttribute="height" constant="3" id="dQF-Um-eV4"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mb-iy-cRJ">
-                    <rect key="frame" x="168" y="5" width="48.5" height="22"/>
-                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
-                    <color key="textColor" name="Black"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="uIF-eL-ofH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="4bZ-Go-ov4"/>
-                <constraint firstItem="8mb-iy-cRJ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="4xU-TB-Mt9"/>
-                <constraint firstItem="8mb-iy-cRJ" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="7Xi-HF-VfQ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="uIF-eL-ofH" secondAttribute="bottom" id="SGQ-Zw-TD5"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="uIF-eL-ofH" secondAttribute="trailing" id="a4v-7Q-M81"/>
-                <constraint firstItem="uIF-eL-ofH" firstAttribute="top" secondItem="8mb-iy-cRJ" secondAttribute="bottom" constant="5" id="jCq-ob-1yQ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="146" y="-167"/>
+            <point key="canvasLocation" x="145.59999999999999" y="-167.76611694152925"/>
         </view>
     </objects>
     <resources>
-        <namedColor name="Black">
-            <color red="0.20784313725490197" green="0.20784313725490197" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="White">
             <color red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
