@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PokedexViewController: UIViewController {
+class PokedexViewController: UIViewController, UISearchBarDelegate {
 
     @IBOutlet weak var pokemonSearchBar: CustomSearchBar!
     
@@ -18,9 +18,20 @@ class PokedexViewController: UIViewController {
     }
     
     private func configureView() {
-        
+        pokemonSearchBar.delegate = self
+        pokemonSearchBar.placeholder = "Busca un pokemon"
     }
     
     
+    //MARK: - Search Bar Delegate
 
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if !searchText.isEmpty {
+            let pokemon = searchText.lowercased()
+            //TODO - Search pokemon
+        }
+    }
+    
+    
+    
 }

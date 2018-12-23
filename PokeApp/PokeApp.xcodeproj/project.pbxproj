@@ -19,6 +19,8 @@
 		65C9918321D02340004B1706 /* FilterButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65C9918221D02340004B1706 /* FilterButton.xib */; };
 		65C9918621D0254A004B1706 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9918521D0254A004B1706 /* UIViewExtension.swift */; };
 		65C9918A21D04864004B1706 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9918921D04864004B1706 /* CustomSearchBar.swift */; };
+		65C9918D21D04BB5004B1706 /* PokemonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9918B21D04BB5004B1706 /* PokemonCollectionViewCell.swift */; };
+		65C9918E21D04BB5004B1706 /* PokemonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65C9918C21D04BB5004B1706 /* PokemonCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		65C9918221D02340004B1706 /* FilterButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterButton.xib; sourceTree = "<group>"; };
 		65C9918521D0254A004B1706 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		65C9918921D04864004B1706 /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
+		65C9918B21D04BB5004B1706 /* PokemonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCollectionViewCell.swift; sourceTree = "<group>"; };
+		65C9918C21D04BB5004B1706 /* PokemonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				65C9916D21D01155004B1706 /* PokedexViewController.swift */,
+				65C9919021D04BC7004B1706 /* Pokemon Collection View Cell */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -131,6 +136,15 @@
 				65C9918921D04864004B1706 /* CustomSearchBar.swift */,
 			);
 			path = "Custom Search Bar";
+			sourceTree = "<group>";
+		};
+		65C9919021D04BC7004B1706 /* Pokemon Collection View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				65C9918C21D04BB5004B1706 /* PokemonCollectionViewCell.xib */,
+				65C9918B21D04BB5004B1706 /* PokemonCollectionViewCell.swift */,
+			);
+			path = "Pokemon Collection View Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +209,7 @@
 				65C9918321D02340004B1706 /* FilterButton.xib in Resources */,
 				65C9918121D022FA004B1706 /* Images.xcassets in Resources */,
 				65C9917A21D01C9F004B1706 /* Colors.xcassets in Resources */,
+				65C9918E21D04BB5004B1706 /* PokemonCollectionViewCell.xib in Resources */,
 				65C9916021CFD0CB004B1706 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,6 +223,7 @@
 			files = (
 				65C9918A21D04864004B1706 /* CustomSearchBar.swift in Sources */,
 				65C9918621D0254A004B1706 /* UIViewExtension.swift in Sources */,
+				65C9918D21D04BB5004B1706 /* PokemonCollectionViewCell.swift in Sources */,
 				65C9916E21D01155004B1706 /* PokedexViewController.swift in Sources */,
 				65C9915D21CFD0CB004B1706 /* ViewController.swift in Sources */,
 				65C9917F21D021D3004B1706 /* FilterButton.swift in Sources */,

@@ -26,7 +26,6 @@ class CustomSearchBar: UISearchBar {
         self.tintColor = Color.granet
         if let textFieldInsideSearchBar = self.value(forKey: "searchField") as? UITextField {
             textFieldInsideSearchBar.textColor = Color.purple
-            textFieldInsideSearchBar.placeholder = "Busca un pokemon"
             textFieldInsideSearchBar.clearButtonMode = UITextField.ViewMode.never
             textFieldInsideSearchBar.layer.borderWidth = 2
             textFieldInsideSearchBar.layer.borderColor = Color.purple.cgColor

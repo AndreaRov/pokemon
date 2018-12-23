@@ -76,6 +76,26 @@
                                     <constraint firstAttribute="bottom" secondItem="IPJ-kO-75k" secondAttribute="bottom" id="x8p-lB-xov"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PEJ-2I-DE6">
+                                <rect key="frame" x="0.0" y="106" width="375" height="512"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nQJ-o5-ok8">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="klp-q5-ueO">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -83,8 +103,12 @@
                             <constraint firstItem="0vp-RS-vWn" firstAttribute="leading" secondItem="Jg0-P2-R9i" secondAttribute="leading" id="HET-UI-udB"/>
                             <constraint firstItem="soM-Ro-FX5" firstAttribute="leading" secondItem="Jg0-P2-R9i" secondAttribute="leading" id="J7A-TF-w07"/>
                             <constraint firstAttribute="trailing" secondItem="soM-Ro-FX5" secondAttribute="trailing" id="KRF-UH-UVM"/>
+                            <constraint firstItem="PEJ-2I-DE6" firstAttribute="leading" secondItem="Jg0-P2-R9i" secondAttribute="leading" id="Mdh-EX-6vH"/>
                             <constraint firstItem="0vp-RS-vWn" firstAttribute="trailing" secondItem="Jg0-P2-R9i" secondAttribute="trailing" id="Nbt-pC-Zcx"/>
+                            <constraint firstItem="Jg0-P2-R9i" firstAttribute="trailing" secondItem="PEJ-2I-DE6" secondAttribute="trailing" id="djt-SI-q7e"/>
                             <constraint firstItem="0vp-RS-vWn" firstAttribute="top" secondItem="Jg0-P2-R9i" secondAttribute="top" id="rR2-SV-eo3"/>
+                            <constraint firstItem="Jg0-P2-R9i" firstAttribute="bottom" secondItem="PEJ-2I-DE6" secondAttribute="bottom" id="vOr-tO-f6o"/>
+                            <constraint firstItem="PEJ-2I-DE6" firstAttribute="top" secondItem="soM-Ro-FX5" secondAttribute="bottom" id="ygy-IE-3Df"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jg0-P2-R9i"/>
                     </view>
