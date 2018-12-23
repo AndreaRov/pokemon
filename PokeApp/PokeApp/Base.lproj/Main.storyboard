@@ -34,34 +34,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="0vp-RS-vWn">
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="0vp-RS-vWn" customClass="CustomSearchBar" customModule="PokeApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewa-ps-Acz" customClass="FilterButton" customModule="PokeApp" customModuleProvider="target">
-                                <rect key="frame" x="31" y="95" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKy-fM-ZzO">
-                                <rect key="frame" x="179" y="139" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="soM-Ro-FX5">
+                                <rect key="frame" x="0.0" y="76" width="375" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2D-mg-Gjq" customClass="FilterButton" customModule="PokeApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FY-jZ-anF" customClass="FilterButton" customModule="PokeApp" customModuleProvider="target">
+                                        <rect key="frame" x="51" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBc-WR-QN4" customClass="FilterButton" customModule="PokeApp" customModuleProvider="target">
+                                        <rect key="frame" x="102" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPJ-kO-75k" customClass="FilterButton" customModule="PokeApp" customModuleProvider="target">
+                                        <rect key="frame" x="153" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="j2D-mg-Gjq" secondAttribute="bottom" id="7yB-uL-fD3"/>
+                                    <constraint firstItem="6FY-jZ-anF" firstAttribute="leading" secondItem="j2D-mg-Gjq" secondAttribute="trailing" constant="5" id="CHW-2E-wyC"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IPJ-kO-75k" secondAttribute="trailing" id="Ebt-1D-l8V"/>
+                                    <constraint firstItem="pBc-WR-QN4" firstAttribute="top" secondItem="soM-Ro-FX5" secondAttribute="top" id="JhD-Fs-grz"/>
+                                    <constraint firstItem="IPJ-kO-75k" firstAttribute="leading" secondItem="pBc-WR-QN4" secondAttribute="trailing" priority="250" constant="5" id="Kr0-xp-m06"/>
+                                    <constraint firstItem="j2D-mg-Gjq" firstAttribute="top" secondItem="soM-Ro-FX5" secondAttribute="top" id="Os2-DO-G9L"/>
+                                    <constraint firstAttribute="bottom" secondItem="6FY-jZ-anF" secondAttribute="bottom" id="TQv-61-NhU"/>
+                                    <constraint firstItem="j2D-mg-Gjq" firstAttribute="leading" secondItem="soM-Ro-FX5" secondAttribute="leading" id="VxL-DE-DEt"/>
+                                    <constraint firstItem="pBc-WR-QN4" firstAttribute="leading" secondItem="6FY-jZ-anF" secondAttribute="trailing" priority="750" constant="5" id="cZO-Mt-PYW"/>
+                                    <constraint firstItem="IPJ-kO-75k" firstAttribute="top" secondItem="soM-Ro-FX5" secondAttribute="top" id="e0g-aa-KSv"/>
+                                    <constraint firstItem="6FY-jZ-anF" firstAttribute="top" secondItem="soM-Ro-FX5" secondAttribute="top" id="eCX-gV-hlo"/>
+                                    <constraint firstAttribute="height" constant="30" id="oTr-OX-f61"/>
+                                    <constraint firstAttribute="bottom" secondItem="pBc-WR-QN4" secondAttribute="bottom" id="sql-jl-99n"/>
+                                    <constraint firstAttribute="bottom" secondItem="IPJ-kO-75k" secondAttribute="bottom" id="x8p-lB-xov"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Jg0-P2-R9i" firstAttribute="trailing" secondItem="ewa-ps-Acz" secondAttribute="trailing" constant="298" id="8a3-BS-qRh"/>
+                            <constraint firstItem="soM-Ro-FX5" firstAttribute="top" secondItem="0vp-RS-vWn" secondAttribute="bottom" id="Gx5-Dt-saS"/>
                             <constraint firstItem="0vp-RS-vWn" firstAttribute="leading" secondItem="Jg0-P2-R9i" secondAttribute="leading" id="HET-UI-udB"/>
+                            <constraint firstItem="soM-Ro-FX5" firstAttribute="leading" secondItem="Jg0-P2-R9i" secondAttribute="leading" id="J7A-TF-w07"/>
+                            <constraint firstAttribute="trailing" secondItem="soM-Ro-FX5" secondAttribute="trailing" id="KRF-UH-UVM"/>
                             <constraint firstItem="0vp-RS-vWn" firstAttribute="trailing" secondItem="Jg0-P2-R9i" secondAttribute="trailing" id="Nbt-pC-Zcx"/>
-                            <constraint firstItem="ewa-ps-Acz" firstAttribute="leading" secondItem="Jg0-P2-R9i" secondAttribute="leading" constant="31" id="XrO-ow-MWX"/>
-                            <constraint firstItem="ewa-ps-Acz" firstAttribute="top" secondItem="0vp-RS-vWn" secondAttribute="bottom" constant="19" id="ecn-em-4k2"/>
                             <constraint firstItem="0vp-RS-vWn" firstAttribute="top" secondItem="Jg0-P2-R9i" secondAttribute="top" id="rR2-SV-eo3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jg0-P2-R9i"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="xia-bB-uhG"/>
                     <connections>
-                        <outlet property="pokemonSearchBar" destination="0vp-RS-vWn" id="OJ8-iC-eSM"/>
+                        <outlet property="pokemonSearchBar" destination="0vp-RS-vWn" id="ygH-XE-VFd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kIc-Lm-G5S" userLabel="First Responder" sceneMemberID="firstResponder"/>

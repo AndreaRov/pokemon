@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 class FilterButton: UIButton {
     
     @IBOutlet weak var selectedView: UIView!
@@ -20,14 +21,14 @@ class FilterButton: UIButton {
     
     static private let nibName = "FilterButton"
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        setViews()
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         loadViewFromNib(nibName: FilterButton.nibName)
+        setViews()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
         setViews()
     }
     

@@ -10,10 +10,15 @@ import UIKit
 
 class PokedexViewController: UIViewController {
 
-    @IBOutlet weak var pokemonSearchBar: UISearchBar!
+    @IBOutlet weak var pokemonSearchBar: CustomSearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureView()
+    }
+    
+    private func configureView() {
+        
     }
     
     
