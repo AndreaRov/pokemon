@@ -10,11 +10,14 @@
 		65C9915B21CFD0CB004B1706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9915A21CFD0CB004B1706 /* AppDelegate.swift */; };
 		65C9915D21CFD0CB004B1706 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9915C21CFD0CB004B1706 /* ViewController.swift */; };
 		65C9916021CFD0CB004B1706 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C9915E21CFD0CB004B1706 /* Main.storyboard */; };
-		65C9916221CFD0CC004B1706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65C9916121CFD0CC004B1706 /* Assets.xcassets */; };
 		65C9916521CFD0CC004B1706 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C9916321CFD0CC004B1706 /* LaunchScreen.storyboard */; };
 		65C9916E21D01155004B1706 /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9916D21D01155004B1706 /* PokedexViewController.swift */; };
 		65C9917A21D01C9F004B1706 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65C9917921D01C9F004B1706 /* Colors.xcassets */; };
 		65C9917C21D01DD4004B1706 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9917B21D01DD4004B1706 /* Color.swift */; };
+		65C9917F21D021D3004B1706 /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9917E21D021D3004B1706 /* FilterButton.swift */; };
+		65C9918121D022FA004B1706 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65C9918021D022FA004B1706 /* Images.xcassets */; };
+		65C9918321D02340004B1706 /* FilterButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65C9918221D02340004B1706 /* FilterButton.xib */; };
+		65C9918621D0254A004B1706 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9918521D0254A004B1706 /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +25,15 @@
 		65C9915A21CFD0CB004B1706 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65C9915C21CFD0CB004B1706 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		65C9915F21CFD0CB004B1706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		65C9916121CFD0CC004B1706 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65C9916421CFD0CC004B1706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65C9916621CFD0CC004B1706 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65C9916D21D01155004B1706 /* PokedexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
 		65C9917921D01C9F004B1706 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		65C9917B21D01DD4004B1706 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		65C9917E21D021D3004B1706 /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
+		65C9918021D022FA004B1706 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		65C9918221D02340004B1706 /* FilterButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterButton.xib; sourceTree = "<group>"; };
+		65C9918521D0254A004B1706 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +66,10 @@
 		65C9915921CFD0CB004B1706 /* PokeApp */ = {
 			isa = PBXGroup;
 			children = (
+				65C9918421D02538004B1706 /* Extensions */,
+				65C9917D21D02084004B1706 /* Views */,
 				65C9917821D01ADB004B1706 /* Resources */,
 				65C9916C21D01025004B1706 /* Scenes */,
-				65C9916121CFD0CC004B1706 /* Assets.xcassets */,
 				65C9915A21CFD0CB004B1706 /* AppDelegate.swift */,
 				65C9915C21CFD0CB004B1706 /* ViewController.swift */,
 				65C9915E21CFD0CB004B1706 /* Main.storyboard */,
@@ -83,10 +90,28 @@
 		65C9917821D01ADB004B1706 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				65C9918021D022FA004B1706 /* Images.xcassets */,
 				65C9917921D01C9F004B1706 /* Colors.xcassets */,
 				65C9917B21D01DD4004B1706 /* Color.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		65C9917D21D02084004B1706 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				65C9918221D02340004B1706 /* FilterButton.xib */,
+				65C9917E21D021D3004B1706 /* FilterButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		65C9918421D02538004B1706 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				65C9918521D0254A004B1706 /* UIViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,8 +173,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				65C9916521CFD0CC004B1706 /* LaunchScreen.storyboard in Resources */,
+				65C9918321D02340004B1706 /* FilterButton.xib in Resources */,
+				65C9918121D022FA004B1706 /* Images.xcassets in Resources */,
 				65C9917A21D01C9F004B1706 /* Colors.xcassets in Resources */,
-				65C9916221CFD0CC004B1706 /* Assets.xcassets in Resources */,
 				65C9916021CFD0CB004B1706 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,8 +187,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65C9918621D0254A004B1706 /* UIViewExtension.swift in Sources */,
 				65C9916E21D01155004B1706 /* PokedexViewController.swift in Sources */,
 				65C9915D21CFD0CB004B1706 /* ViewController.swift in Sources */,
+				65C9917F21D021D3004B1706 /* FilterButton.swift in Sources */,
 				65C9917C21D01DD4004B1706 /* Color.swift in Sources */,
 				65C9915B21CFD0CB004B1706 /* AppDelegate.swift in Sources */,
 			);

@@ -34,44 +34,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="0vp-RS-vWn" customClass="CustomSearchBar" customModule="PokeApp" customModuleProvider="target">
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="0vp-RS-vWn">
                                 <rect key="frame" x="0.0" y="20" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dEf-kp-URp">
-                                <rect key="frame" x="0.0" y="76" width="375" height="542"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3lF-NE-B7b">
-                                    <size key="itemSize" width="32" height="67"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="B5g-pP-hFm">
-                                        <rect key="frame" x="0.0" y="0.0" width="32" height="67"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="32" height="67"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dEf-kp-URp" firstAttribute="top" secondItem="0vp-RS-vWn" secondAttribute="bottom" id="2Im-Ol-Ab7"/>
                             <constraint firstItem="0vp-RS-vWn" firstAttribute="leading" secondItem="Jg0-P2-R9i" secondAttribute="leading" id="HET-UI-udB"/>
-                            <constraint firstItem="Jg0-P2-R9i" firstAttribute="bottom" secondItem="dEf-kp-URp" secondAttribute="bottom" id="Kl7-y8-LPL"/>
                             <constraint firstItem="0vp-RS-vWn" firstAttribute="trailing" secondItem="Jg0-P2-R9i" secondAttribute="trailing" id="Nbt-pC-Zcx"/>
-                            <constraint firstItem="Jg0-P2-R9i" firstAttribute="trailing" secondItem="dEf-kp-URp" secondAttribute="trailing" id="l40-ka-rj9"/>
                             <constraint firstItem="0vp-RS-vWn" firstAttribute="top" secondItem="Jg0-P2-R9i" secondAttribute="top" id="rR2-SV-eo3"/>
-                            <constraint firstItem="dEf-kp-URp" firstAttribute="leading" secondItem="Jg0-P2-R9i" secondAttribute="leading" id="yaA-D6-drU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jg0-P2-R9i"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="xia-bB-uhG"/>
+                    <connections>
+                        <outlet property="pokemonSearchBar" destination="0vp-RS-vWn" id="OJ8-iC-eSM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kIc-Lm-G5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
