@@ -114,6 +114,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="xia-bB-uhG"/>
                     <connections>
+                        <outlet property="pokemonCollectionView" destination="PEJ-2I-DE6" id="OBA-Xy-esE"/>
                         <outlet property="pokemonSearchBar" destination="0vp-RS-vWn" id="ygH-XE-VFd"/>
                     </connections>
                 </viewController>

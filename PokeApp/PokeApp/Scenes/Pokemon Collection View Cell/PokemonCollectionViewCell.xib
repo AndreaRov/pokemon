@@ -56,6 +56,9 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="355" height="173"/>
+            <connections>
+                <outlet property="pokemonImageView" destination="oVs-Mr-bLE" id="enb-Mz-jJn"/>
+            </connections>
             <point key="canvasLocation" x="138.40000000000001" y="83.208395802098963"/>
         </collectionViewCell>
     </objects>

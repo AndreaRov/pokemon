@@ -12,6 +12,7 @@ class PokedexViewController: UIViewController, UISearchBarDelegate, UICollection
     
 
     @IBOutlet weak var pokemonSearchBar: CustomSearchBar!
+    @IBOutlet weak var pokemonCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +24,14 @@ class PokedexViewController: UIViewController, UISearchBarDelegate, UICollection
     private func configureView() {
         pokemonSearchBar.delegate = self
         pokemonSearchBar.placeholder = "Busca un pokemon"
+        
+        registerCellTypes()
     }
     
+    
+    private func registerCellTypes() {
+        pokemonCollectionView.register(UINib(nibName: "PokemonCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: PokemonCollectionViewCell.identifier)
+    }
     
     //MARK: - Search Bar
 
@@ -45,6 +52,9 @@ class PokedexViewController: UIViewController, UISearchBarDelegate, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        if let cell = pokemonCollectionView.dequeueReusableCell(withReuseIdentifier: PokemonCollectionViewCell.identifier, for: indexPath) as? PokemonCollectionViewCell {
+            
+        }
         return UICollectionViewCell()
     }
     
