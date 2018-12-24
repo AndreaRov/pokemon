@@ -8,7 +8,14 @@
 
 import UIKit
 
-class PokedexViewController: UIViewController, UISearchBarDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+protocol PokedexViewControllerDelegate: class {
+    
+}
+
+final class PokedexViewController: UIViewController, UISearchBarDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    var configurator = PokedexConfigurator()
+    var presenter: PokedexPresenterDelegate!
     
     @IBOutlet weak var pokemonSearchBar: CustomSearchBar!
     @IBOutlet weak var pokemonCollectionView: UICollectionView!
@@ -17,6 +24,7 @@ class PokedexViewController: UIViewController, UISearchBarDelegate, UICollection
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configurator.configure(pokedexViewController: self)
         configureView()
     }
     
@@ -78,5 +86,10 @@ class PokedexViewController: UIViewController, UISearchBarDelegate, UICollection
         return UICollectionViewCell()
     }
     
+    
+}
+
+
+extension PokedexViewController: PokedexViewControllerDelegate {
     
 }

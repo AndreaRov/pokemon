@@ -22,6 +22,9 @@
 		65C9918D21D04BB5004B1706 /* PokemonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9918B21D04BB5004B1706 /* PokemonCollectionViewCell.swift */; };
 		65C9918E21D04BB5004B1706 /* PokemonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65C9918C21D04BB5004B1706 /* PokemonCollectionViewCell.xib */; };
 		65C9919221D05F95004B1706 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9919121D05F95004B1706 /* UIViewControllerExtension.swift */; };
+		65C9919421D12FF1004B1706 /* PokedexConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9919321D12FF1004B1706 /* PokedexConfigurator.swift */; };
+		65C9919621D1310E004B1706 /* PokedexPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9919521D1310E004B1706 /* PokedexPresenter.swift */; };
+		65C9919821D13194004B1706 /* PokedexRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9919721D13194004B1706 /* PokedexRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		65C9918B21D04BB5004B1706 /* PokemonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCollectionViewCell.swift; sourceTree = "<group>"; };
 		65C9918C21D04BB5004B1706 /* PokemonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonCollectionViewCell.xib; sourceTree = "<group>"; };
 		65C9919121D05F95004B1706 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		65C9919321D12FF1004B1706 /* PokedexConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexConfigurator.swift; sourceTree = "<group>"; };
+		65C9919521D1310E004B1706 /* PokedexPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexPresenter.swift; sourceTree = "<group>"; };
+		65C9919721D13194004B1706 /* PokedexRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +84,8 @@
 				65C9917D21D02084004B1706 /* Views */,
 				65C9917821D01ADB004B1706 /* Resources */,
 				65C9916C21D01025004B1706 /* Scenes */,
-				65C9915A21CFD0CB004B1706 /* AppDelegate.swift */,
 				65C9915C21CFD0CB004B1706 /* ViewController.swift */,
+				65C9915A21CFD0CB004B1706 /* AppDelegate.swift */,
 				65C9915E21CFD0CB004B1706 /* Main.storyboard */,
 				65C9916321CFD0CC004B1706 /* LaunchScreen.storyboard */,
 				65C9916621CFD0CC004B1706 /* Info.plist */,
@@ -90,7 +96,10 @@
 		65C9916C21D01025004B1706 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				65C9919321D12FF1004B1706 /* PokedexConfigurator.swift */,
 				65C9916D21D01155004B1706 /* PokedexViewController.swift */,
+				65C9919521D1310E004B1706 /* PokedexPresenter.swift */,
+				65C9919721D13194004B1706 /* PokedexRouter.swift */,
 				65C9919021D04BC7004B1706 /* Pokemon Collection View Cell */,
 			);
 			path = Scenes;
@@ -227,12 +236,15 @@
 				65C9918A21D04864004B1706 /* CustomSearchBar.swift in Sources */,
 				65C9918621D0254A004B1706 /* UIViewExtension.swift in Sources */,
 				65C9919221D05F95004B1706 /* UIViewControllerExtension.swift in Sources */,
+				65C9919421D12FF1004B1706 /* PokedexConfigurator.swift in Sources */,
 				65C9918D21D04BB5004B1706 /* PokemonCollectionViewCell.swift in Sources */,
+				65C9919621D1310E004B1706 /* PokedexPresenter.swift in Sources */,
 				65C9916E21D01155004B1706 /* PokedexViewController.swift in Sources */,
 				65C9915D21CFD0CB004B1706 /* ViewController.swift in Sources */,
 				65C9917F21D021D3004B1706 /* FilterButton.swift in Sources */,
 				65C9917C21D01DD4004B1706 /* Color.swift in Sources */,
 				65C9915B21CFD0CB004B1706 /* AppDelegate.swift in Sources */,
+				65C9919821D13194004B1706 /* PokedexRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
