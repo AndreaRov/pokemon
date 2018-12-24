@@ -9,12 +9,11 @@
 import Foundation
 
 enum TransactionError: Error {
+    case invalidURL
+    case invalidHttpResponse
+    case statusCodeProblem
+    case decodingError
     case server(message: String)
-    case entityUnwrappedFails
-    case urlRequestUnwrappedFails
-    case expectedPopularMovieEntity
-    case expectedMovieDetailsEntity
-    case expectedVideosEntity
 }
 
 enum Transaction<Value:Any> {

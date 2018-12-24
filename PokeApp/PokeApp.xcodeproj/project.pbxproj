@@ -26,11 +26,12 @@
 		65C9919821D13194004B1706 /* PokedexRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9919721D13194004B1706 /* PokedexRouter.swift */; };
 		65C9919D21D143B5004B1706 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9919C21D143B5004B1706 /* Transaction.swift */; };
 		65C9919F21D14407004B1706 /* PokeAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9919E21D14407004B1706 /* PokeAPIManager.swift */; };
-		65C991A521D147C8004B1706 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C991A421D147C8004B1706 /* Model.swift */; };
 		65C991A721D14DBE004B1706 /* ApiRequestDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C991A621D14DBE004B1706 /* ApiRequestDelegate.swift */; };
 		65C991A921D14EA6004B1706 /* GetPokemonRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C991A821D14EA6004B1706 /* GetPokemonRequest.swift */; };
 		65C991AB21D1509D004B1706 /* PokemonEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C991AA21D1509D004B1706 /* PokemonEntity.swift */; };
 		65C991AD21D151C1004B1706 /* PokemonSpritesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C991AC21D151C1004B1706 /* PokemonSpritesEntity.swift */; };
+		65C991AF21D152C4004B1706 /* PokemonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C991AE21D152C4004B1706 /* PokemonService.swift */; };
+		65C991B121D16E8E004B1706 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C991B021D16E8E004B1706 /* UIImageViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,11 +56,12 @@
 		65C9919721D13194004B1706 /* PokedexRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexRouter.swift; sourceTree = "<group>"; };
 		65C9919C21D143B5004B1706 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		65C9919E21D14407004B1706 /* PokeAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAPIManager.swift; sourceTree = "<group>"; };
-		65C991A421D147C8004B1706 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		65C991A621D14DBE004B1706 /* ApiRequestDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestDelegate.swift; sourceTree = "<group>"; };
 		65C991A821D14EA6004B1706 /* GetPokemonRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPokemonRequest.swift; sourceTree = "<group>"; };
 		65C991AA21D1509D004B1706 /* PokemonEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonEntity.swift; sourceTree = "<group>"; };
 		65C991AC21D151C1004B1706 /* PokemonSpritesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSpritesEntity.swift; sourceTree = "<group>"; };
+		65C991AE21D152C4004B1706 /* PokemonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonService.swift; sourceTree = "<group>"; };
+		65C991B021D16E8E004B1706 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			children = (
 				65C9918521D0254A004B1706 /* UIViewExtension.swift */,
 				65C9919121D05F95004B1706 /* UIViewControllerExtension.swift */,
+				65C991B021D16E8E004B1706 /* UIImageViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -175,8 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				65C9919B21D1435C004B1706 /* Resources */,
-				65C991A021D14427004B1706 /* Use Cases */,
-				65C991A321D1466D004B1706 /* Model */,
+				65C991A021D14427004B1706 /* Services */,
 				65C9919A21D13C45004B1706 /* API */,
 			);
 			path = Core;
@@ -200,11 +202,12 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		65C991A021D14427004B1706 /* Use Cases */ = {
+		65C991A021D14427004B1706 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				65C991AE21D152C4004B1706 /* PokemonService.swift */,
 			);
-			path = "Use Cases";
+			path = Services;
 			sourceTree = "<group>";
 		};
 		65C991A121D14441004B1706 /* Entities */ = {
@@ -223,14 +226,6 @@
 				65C991A821D14EA6004B1706 /* GetPokemonRequest.swift */,
 			);
 			path = Requests;
-			sourceTree = "<group>";
-		};
-		65C991A321D1466D004B1706 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				65C991A421D147C8004B1706 /* Model.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,16 +305,17 @@
 				65C9918A21D04864004B1706 /* CustomSearchBar.swift in Sources */,
 				65C9919F21D14407004B1706 /* PokeAPIManager.swift in Sources */,
 				65C9918621D0254A004B1706 /* UIViewExtension.swift in Sources */,
+				65C991B121D16E8E004B1706 /* UIImageViewExtension.swift in Sources */,
 				65C9919D21D143B5004B1706 /* Transaction.swift in Sources */,
 				65C991A921D14EA6004B1706 /* GetPokemonRequest.swift in Sources */,
 				65C9919221D05F95004B1706 /* UIViewControllerExtension.swift in Sources */,
 				65C9919421D12FF1004B1706 /* PokedexConfigurator.swift in Sources */,
 				65C9918D21D04BB5004B1706 /* PokemonCollectionViewCell.swift in Sources */,
 				65C991A721D14DBE004B1706 /* ApiRequestDelegate.swift in Sources */,
-				65C991A521D147C8004B1706 /* Model.swift in Sources */,
 				65C9919621D1310E004B1706 /* PokedexPresenter.swift in Sources */,
 				65C9916E21D01155004B1706 /* PokedexViewController.swift in Sources */,
 				65C9917F21D021D3004B1706 /* FilterButton.swift in Sources */,
+				65C991AF21D152C4004B1706 /* PokemonService.swift in Sources */,
 				65C9917C21D01DD4004B1706 /* Color.swift in Sources */,
 				65C9915B21CFD0CB004B1706 /* AppDelegate.swift in Sources */,
 				65C991AD21D151C1004B1706 /* PokemonSpritesEntity.swift in Sources */,

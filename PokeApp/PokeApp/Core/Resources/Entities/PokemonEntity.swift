@@ -10,5 +10,5 @@ import Foundation
 
 struct PokemonEntity: Codable {
     let name: String
-    let sprites: [PokemonSpritesEntity]
+    let sprites: PokemonSpritesEntity
 }

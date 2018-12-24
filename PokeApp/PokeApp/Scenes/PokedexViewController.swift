@@ -9,7 +9,7 @@
 import UIKit
 
 protocol PokedexViewControllerDelegate: class {
-    
+    func reloadPokemonData()
 }
 
 final class PokedexViewController: UIViewController, UISearchBarDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
@@ -26,6 +26,7 @@ final class PokedexViewController: UIViewController, UISearchBarDelegate, UIColl
         super.viewDidLoad()
         configurator.configure(pokedexViewController: self)
         configureView()
+        presenter.viewIsReady()
     }
     
     private func configureView() {
@@ -55,32 +56,23 @@ final class PokedexViewController: UIViewController, UISearchBarDelegate, UIColl
         if !searchText.isEmpty {
             let pokemon = searchText.lowercased()
             //TODO - Search pokemon
+            presenter.searchPokemon(pokemon: pokemon)
         }
     }
     
     
     //MARK: - Collection View
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 4
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerCollectionView", for: indexPath)
-        
-        
-        return headerView
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return presenter.getTotalPokemonsCount()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
         if let cell = pokemonCollectionView.dequeueReusableCell(withReuseIdentifier: PokemonCollectionViewCell.identifier, for: indexPath) as? PokemonCollectionViewCell {
-            cell.pokemonNameLabel.text = "Prueba"
-            cell.pokemonImageView.image = UIImage(named: "Example")
+            
+            cell.setName(name: presenter.getPokemonName(row: indexPath.row))
+            cell.setImage(urlString: presenter.getPokemonImageURL(row: indexPath.row))
             return cell
         }
         return UICollectionViewCell()
@@ -91,5 +83,9 @@ final class PokedexViewController: UIViewController, UISearchBarDelegate, UIColl
 
 
 extension PokedexViewController: PokedexViewControllerDelegate {
+    
+    func reloadPokemonData() {
+        pokemonCollectionView.reloadData()
+    }
     
 }

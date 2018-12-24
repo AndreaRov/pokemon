@@ -39,7 +39,7 @@ class FilterButton: UIButton {
     }
     
     private func setViews() {
-        self.setTitle("FILTER", for: .normal)
+        self.setTitle("", for: .normal)
         self.setTitleColor(Color.black, for: .normal)
         self.titleLabel?.font = UIFont(name: "Menlo", size: 16)
         selectedView.backgroundColor = Color.white

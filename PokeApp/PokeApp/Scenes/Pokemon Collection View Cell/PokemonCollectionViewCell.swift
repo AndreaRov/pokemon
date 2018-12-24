@@ -27,10 +27,12 @@ class PokemonCollectionViewCell: UICollectionViewCell {
     }
     
     
-    func setImage(image: UIImage) {
-        DispatchQueue.main.async {
-            self.pokemonImageView.image = image
-        }
+    func setName(name: String) {
+        self.pokemonNameLabel.text = name
+    }
+    
+    func setImage(urlString: String) {
+        self.pokemonImageView.imageFromServerURL(urlString, imagePlaceHolder: UIImage())
     }
     
     
