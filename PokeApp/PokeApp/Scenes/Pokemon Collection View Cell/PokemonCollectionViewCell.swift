@@ -11,6 +11,7 @@ import UIKit
 class PokemonCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var pokemonImageView: UIImageView!
+    @IBOutlet weak var pokemonNameLabel: UILabel!
     
     static let identifier = "pokemonCollectionViewCell"
 
@@ -21,6 +22,8 @@ class PokemonCollectionViewCell: UICollectionViewCell {
     
     private func initView() {
         pokemonImageView.image = UIImage()
+        pokemonNameLabel.text = ""
+        pokemonNameLabel.textColor = Color.black
     }
     
     
