@@ -21,6 +21,7 @@ class PokedexViewController: UIViewController, UISearchBarDelegate, UICollection
     }
     
     private func configureView() {
+        hideKeyboardWhenTappedAround()
         setDelegates()
         setTextValues()
         registerCell()
@@ -29,6 +30,7 @@ class PokedexViewController: UIViewController, UISearchBarDelegate, UICollection
     private func setDelegates() {
         pokemonSearchBar.delegate = self
         pokemonCollectionView.delegate = self
+        pokemonCollectionView.dataSource = self
     }
     
     private func setTextValues() {
@@ -52,7 +54,14 @@ class PokedexViewController: UIViewController, UISearchBarDelegate, UICollection
     //MARK: - Collection View
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerCollectionView", for: indexPath)
+        
+        
+        return headerView
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -63,9 +72,7 @@ class PokedexViewController: UIViewController, UISearchBarDelegate, UICollection
     
         if let cell = pokemonCollectionView.dequeueReusableCell(withReuseIdentifier: PokemonCollectionViewCell.identifier, for: indexPath) as? PokemonCollectionViewCell {
             cell.pokemonNameLabel.text = "Prueba"
-            if indexPath.row == 1 {
-                print()
-            }
+            cell.pokemonImageView.image = UIImage(named: "Example")
             return cell
         }
         return UICollectionViewCell()
