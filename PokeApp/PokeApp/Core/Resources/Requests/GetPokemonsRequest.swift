@@ -1,5 +1,5 @@
 //
-//  GetPokemonRequest.swift
+//  GetPokemonsRequest.swift
 //  PokeApp
 //
 //  Created by andrea on 24/12/2018.
@@ -8,13 +8,7 @@
 
 import Foundation
 
-class GetPokemonRequest: APIRequestDelegate {
-    
-    let pokemon:String
-    
-    init(pokemon: String) {
-        self.pokemon = pokemon
-    }
+class GetPokemonsRequest: APIRequestDelegate {
     
     typealias Response = [PokemonEntity] //Entity
     
@@ -22,7 +16,7 @@ class GetPokemonRequest: APIRequestDelegate {
         let baseURL = "https://pokeapi.co"
         let endPoint = "/api/v2/pokemon/"
         
-        return "\(baseURL)\(endPoint)\(pokemon)/"
+        return "\(baseURL)\(endPoint)"
     }
     
 }

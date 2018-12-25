@@ -9,20 +9,21 @@
 import Foundation
 
 protocol PokedexPresenterDelegate {
+    var router: PokedexRouterDelegate { get }
+    
     func viewIsReady()
-    func searchPokemon(pokemon: String)
     func getTotalPokemonsCount() -> Int
     func getPokemonName(row: Int) -> String
-    func getPokemonImageURL(row: Int) -> String
+    func didSelectItemAt(row: Int)
 }
 
 final class PokedexPresenter {
     
     fileprivate weak var view: PokedexViewControllerDelegate?
-    private var router: PokedexRouterDelegate
+    internal var router: PokedexRouterDelegate
     private let service: PokemonServiceDelegate
     
-    var arrPokemon = [PokemonEntity]()
+    var arrPokemons = [PokemonsResultsEntity]()
     
     init(view: PokedexViewController, router: PokedexRouter, service: PokemonService) {
         self.view = view
@@ -36,44 +37,34 @@ final class PokedexPresenter {
 extension PokedexPresenter: PokedexPresenterDelegate {
     
     func viewIsReady() {
-        
-    }
-    
-    
-    func searchPokemon(pokemon: String) {
-        service.searchPokemon(pokemon: pokemon) { (transaction) in
-        
+        service.getAllPokemons { (transaction) in
+            
             switch transaction {
                 
             case .fail(let error):
                 print("Presenter Show Error:",error)
-                DispatchQueue.main.async {
-                    self.arrPokemon.removeAll()
-                    self.view?.reloadPokemonData()
-                }
             case .sucess(let data):
                 DispatchQueue.main.async {
-                    self.arrPokemon = [data]
+                    self.arrPokemons = data
                     self.view?.reloadPokemonData()
                 }
                 
             }
             
         }
-        
     }
     
     
     func getTotalPokemonsCount() -> Int {
-        return arrPokemon.count
+        return arrPokemons.count
     }
     
     func getPokemonName(row: Int) -> String {
-        return arrPokemon[row].name
+        return arrPokemons[row].name
     }
     
-    func getPokemonImageURL(row: Int) -> String {
-        return arrPokemon[row].sprites.front_default
+    func didSelectItemAt(row: Int) {
+        router.navigateToPokemonDetail(pokemonURL: arrPokemons[row].url)
     }
     
 }

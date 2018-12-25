@@ -10,7 +10,6 @@ import UIKit
 
 class PokemonCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var pokemonImageView: UIImageView!
     @IBOutlet weak var pokemonNameLabel: UILabel!
     
     static let identifier = "pokemonCollectionViewCell"
@@ -21,7 +20,6 @@ class PokemonCollectionViewCell: UICollectionViewCell {
     }
     
     private func initView() {
-        pokemonImageView.image = UIImage()
         pokemonNameLabel.text = ""
         pokemonNameLabel.textColor = Color.black
     }
@@ -30,11 +28,6 @@ class PokemonCollectionViewCell: UICollectionViewCell {
     func setName(name: String) {
         self.pokemonNameLabel.text = name
     }
-    
-    func setImage(urlString: String) {
-        self.pokemonImageView.imageFromServerURL(urlString, imagePlaceHolder: UIImage())
-    }
-    
     
 
 }
