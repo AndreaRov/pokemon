@@ -12,6 +12,7 @@ protocol PokemonServiceDelegate {
     func searchPokemon(pokemon: String, completion: @escaping (Transaction<PokemonEntity>) -> Void)
     func getAllPokemons(completion: @escaping (Transaction<[PokemonsResultsEntity]>) -> Void)
     func getPokemonImageUrl(requestResourceName: String, completion: @escaping (Transaction<String>) -> Void)
+    func getPokemon(resourceName: String, completion: @escaping (Transaction<PokemonEntity>) -> Void) 
 }
 
 class PokemonService: PokemonServiceDelegate {
@@ -24,7 +25,7 @@ class PokemonService: PokemonServiceDelegate {
     
     func searchPokemon(pokemon: String, completion: @escaping (Transaction<PokemonEntity>) -> Void) {
         
-        network.getPokemonSearch(pokemon: pokemon) { (transaction) in
+        network.getPokemonSearch(request: pokemon) { (transaction) in
             
             switch transaction {
             case .sucess(let data):
@@ -64,9 +65,19 @@ class PokemonService: PokemonServiceDelegate {
             }
             
         }
-        
-        
-        
+    }
+    
+    func getPokemon(resourceName: String, completion: @escaping (Transaction<PokemonEntity>) -> Void) {
+        network.getPokemon(requestResourceName: resourceName) { (transaction) in
+            
+            switch transaction {
+            case .sucess(let data):
+                completion(Transaction.sucess(data))
+            case .fail(let error):
+                completion(Transaction.fail(error))
+            }
+            
+        }
     }
     
 }

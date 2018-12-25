@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -88,7 +89,46 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTC-VV-7WM">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rqa-LO-iiU">
+                                                <rect key="frame" x="174.5" y="10" width="26" height="26"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="26" id="VHl-fi-aoj"/>
+                                                    <constraint firstAttribute="height" constant="26" id="w3S-DA-qPx"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbb-0P-wn1">
+                                                <rect key="frame" x="10" y="91.5" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCV-Gb-nt5">
+                                                <rect key="frame" x="60" y="91.5" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvc-MV-xqj">
+                                                <rect key="frame" x="10" y="56" width="355" height="25.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <color key="textColor" name="Purple"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Zbb-0P-wn1" firstAttribute="leading" secondItem="gTC-VV-7WM" secondAttribute="leading" constant="10" id="72w-HU-f1J"/>
+                                            <constraint firstAttribute="trailing" secondItem="gvc-MV-xqj" secondAttribute="trailing" constant="10" id="Agi-y1-xv2"/>
+                                            <constraint firstItem="gvc-MV-xqj" firstAttribute="leading" secondItem="gTC-VV-7WM" secondAttribute="leading" constant="10" id="BNX-fV-382"/>
+                                            <constraint firstItem="Rqa-LO-iiU" firstAttribute="top" secondItem="gTC-VV-7WM" secondAttribute="top" constant="10" id="EaC-Sg-qho"/>
+                                            <constraint firstItem="RCV-Gb-nt5" firstAttribute="top" secondItem="gvc-MV-xqj" secondAttribute="bottom" constant="10" id="Ly5-qC-oOu"/>
+                                            <constraint firstItem="Rqa-LO-iiU" firstAttribute="centerX" secondItem="gTC-VV-7WM" secondAttribute="centerX" id="MTD-oX-a6f"/>
+                                            <constraint firstItem="gvc-MV-xqj" firstAttribute="top" secondItem="Rqa-LO-iiU" secondAttribute="bottom" constant="20" id="PDX-Nv-mM2"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RCV-Gb-nt5" secondAttribute="trailing" constant="10" id="ZdS-CV-gBg"/>
+                                            <constraint firstItem="RCV-Gb-nt5" firstAttribute="leading" secondItem="Zbb-0P-wn1" secondAttribute="trailing" constant="8" id="bkp-Ka-ZgV"/>
+                                            <constraint firstItem="Zbb-0P-wn1" firstAttribute="top" secondItem="gvc-MV-xqj" secondAttribute="bottom" constant="10" id="nhU-iK-i4m"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -110,10 +150,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DwF-TG-sfQ"/>
                     </view>
+                    <connections>
+                        <outlet property="pokemonImageView" destination="Rqa-LO-iiU" id="3KD-48-C0Y"/>
+                        <outlet property="pokemonName" destination="gvc-MV-xqj" id="XvM-vX-nXQ"/>
+                        <outlet property="typePokemonLabel" destination="RCV-Gb-nt5" id="y2z-03-e30"/>
+                        <outlet property="typeTitleLabel" destination="Zbb-0P-wn1" id="SG2-96-bOD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wY2-l0-bp5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1751" y="-1090"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="Purple">
+            <color red="0.40392156862745099" green="0.34901960784313724" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

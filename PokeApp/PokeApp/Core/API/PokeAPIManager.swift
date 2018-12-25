@@ -9,15 +9,15 @@
 import Foundation
 
 protocol PokeAPIManagerDelegate {
-    func getPokemonSearch(pokemon: String, completion: @escaping (Transaction<PokemonEntity>) -> Void)
+    func getPokemonSearch(request: String, completion: @escaping (Transaction<PokemonEntity>) -> Void)
     func getAllPokemonsResults(completion: @escaping (Transaction<[PokemonsResultsEntity]>) -> Void)
     func getPokemon(requestResourceName: String, completion: @escaping (Transaction<PokemonEntity>) -> Void)
 }
 
 class PokeAPIManager: PokeAPIManagerDelegate {
     
-    func getPokemonSearch(pokemon: String, completion: @escaping (Transaction<PokemonEntity>) -> Void) {
-        let request = GetPokemonRequest(pokemon: pokemon)
+    func getPokemonSearch(request: String, completion: @escaping (Transaction<PokemonEntity>) -> Void) {
+        let request = GetPokemonRequest(pokemon: request)
         
         guard let baseUrlUnwrapped = URL(string: request.resourceName) else {
             completion(Transaction.fail(TransactionError.invalidURL))

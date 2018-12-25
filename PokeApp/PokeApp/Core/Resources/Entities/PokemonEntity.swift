@@ -11,4 +11,14 @@ import Foundation
 struct PokemonEntity: Codable {
     let name: String
     let sprites: PokemonSpritesEntity
+    let types: [PokemonTypesEntity]
+}
+
+
+struct PokemonTypesEntity: Codable {
+    let type: PokemonTypeEntity
+}
+
+struct PokemonTypeEntity: Codable {
+    let name: String
 }

@@ -36,6 +36,8 @@
 		65C991B721D1967B004B1706 /* PokemonsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C991B621D1967B004B1706 /* PokemonsEntity.swift */; };
 		65C991B921D19959004B1706 /* PokemonsResultsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C991B821D19959004B1706 /* PokemonsResultsEntity.swift */; };
 		65C991BC21D1A549004B1706 /* PokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C991BB21D1A549004B1706 /* PokemonViewController.swift */; };
+		65C991BE21D1B7D4004B1706 /* PokemonConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C991BD21D1B7D4004B1706 /* PokemonConfigurator.swift */; };
+		65C991C021D1B90B004B1706 /* PokemonPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C991BF21D1B90B004B1706 /* PokemonPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		65C991B621D1967B004B1706 /* PokemonsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsEntity.swift; sourceTree = "<group>"; };
 		65C991B821D19959004B1706 /* PokemonsResultsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsResultsEntity.swift; sourceTree = "<group>"; };
 		65C991BB21D1A549004B1706 /* PokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewController.swift; sourceTree = "<group>"; };
+		65C991BD21D1B7D4004B1706 /* PokemonConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonConfigurator.swift; sourceTree = "<group>"; };
+		65C991BF21D1B90B004B1706 /* PokemonPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,7 +263,9 @@
 		65C991BA21D1A52D004B1706 /* Pokemon Detail */ = {
 			isa = PBXGroup;
 			children = (
+				65C991BD21D1B7D4004B1706 /* PokemonConfigurator.swift */,
 				65C991BB21D1A549004B1706 /* PokemonViewController.swift */,
+				65C991BF21D1B90B004B1706 /* PokemonPresenter.swift */,
 			);
 			path = "Pokemon Detail";
 			sourceTree = "<group>";
@@ -346,6 +352,7 @@
 				65C991B121D16E8E004B1706 /* UIImageViewExtension.swift in Sources */,
 				65C9919D21D143B5004B1706 /* Transaction.swift in Sources */,
 				65C991A921D14EA6004B1706 /* GetPokemonRequest.swift in Sources */,
+				65C991BE21D1B7D4004B1706 /* PokemonConfigurator.swift in Sources */,
 				65C991BC21D1A549004B1706 /* PokemonViewController.swift in Sources */,
 				65C9919221D05F95004B1706 /* UIViewControllerExtension.swift in Sources */,
 				65C9919421D12FF1004B1706 /* PokedexConfigurator.swift in Sources */,
@@ -353,6 +360,7 @@
 				65C991A721D14DBE004B1706 /* ApiRequestDelegate.swift in Sources */,
 				65C9919621D1310E004B1706 /* PokedexPresenter.swift in Sources */,
 				65C9916E21D01155004B1706 /* PokedexViewController.swift in Sources */,
+				65C991C021D1B90B004B1706 /* PokemonPresenter.swift in Sources */,
 				65C991B721D1967B004B1706 /* PokemonsEntity.swift in Sources */,
 				65C9917F21D021D3004B1706 /* FilterButton.swift in Sources */,
 				65C991AF21D152C4004B1706 /* PokemonService.swift in Sources */,

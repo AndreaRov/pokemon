@@ -18,20 +18,28 @@ final class PokedexRouter: PokedexRouterDelegate {
     
     fileprivate weak var view: PokedexViewControllerDelegate?
     
+    var pokemonURL: String?
+    
     init(view: PokedexViewController) {
         self.view = view
     }
     
     
     func navigateToPokemonDetail(pokemonURL: String) {
-        view?.performSegue(withIdentifier: "pokedexToPokemonDetail", sender: nil)
+        self.pokemonURL = pokemonURL
+        if let _ = self.pokemonURL {
+            view?.performSegue(withIdentifier: "pokedexToPokemonDetail", sender: nil)
+        }
     }
     
     
     func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let pokemonViewController = segue.destination as? PokemonViewController {
+        
+        if let pokemonViewController = segue.destination as? PokemonViewController,
+            let pokemonUrlUnwrapped = self.pokemonURL {
             
+            pokemonViewController.configurator = PokemonConfigurator(pokemonURL: pokemonUrlUnwrapped)
         }
         
     }
